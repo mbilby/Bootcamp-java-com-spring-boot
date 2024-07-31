@@ -3,6 +3,9 @@
 ## Autores
 - [Gleyson Sampaio](https://github.com/glysns)
 
+## Modificado para entrega
+- [Marcelo Bilby](https://github.com/mbilby)
+
 ## POO - Desafio
 
 ### Modelagem e Diagramação de um Componente iPhone
@@ -27,30 +30,45 @@ Com base no vídeo de lançamento do iPhone de 2007 (link abaixo), você deve el
 1. Criar um diagrama UML que represente as funcionalidades descritas acima.
 2. Implementar as classes e interfaces correspondentes em Java (Opcional).
 
-### Exemplo de Diagrama UML (Mermaid)
+### Diagrama UML (Mermaid)
 ```mermaid
 classDiagram
-    class ReprodutorMusical {
-        +exemploMetodo1()
-        +exemploMetodo2(String exemplo)
-    }
+class Multifuncao
+style Multifuncao fill: #7dd, stroke: #333
 
-    class AparelhoTelefonico {
-        +exemploMetodo1()
-        +exemploMetodo2(String exemplo)
-    }
+Telefone <|-- Multifuncao : ligar
+Telefone <|-- Multifuncao : atender
+Telefone <|-- Multifuncao : iniciarCorreioVoz
 
-    class NavegadorInternet {
-        +exemploMetodo1()
-        +exemploMetodo2(String exemplo)
-    }
+<<Interface>> Telefone 
+class Telefone {
+    + ligar(String numero) void
+    + atender() void
+    + iniciarCorreioVoz() void
+}
 
-    class iPhone {
-    }
+Reprodutor <|-- Multifuncao : tocar
+Reprodutor <|-- Multifuncao : pausar
+Reprodutor <|-- Multifuncao : selecionarMusica
 
-    iPhone --> ReprodutorMusical
-    iPhone --> AparelhoTelefonico
-    iPhone --> NavegadorInternet
+<<Interface>> Reprodutor
+class Reprodutor {
+    + tocar() void
+    + pasuar() void
+    + selecionarMusica(String musica)
+}
+
+
+Navegador <|-- Multifuncao : exibirPagina()
+Navegador <|-- Multifuncao : adicionarNovaAba()
+Navegador <|-- Multifuncao : atualizarPagina()
+
+<<Interface>> Navegador
+class Navegador {
+    + exibirPagina(String url) void
+    + adicionarNovaAba() void
+    + atualizarPagina() void
+}
 ```
 
 ### Instruções
