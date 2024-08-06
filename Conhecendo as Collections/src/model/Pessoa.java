@@ -1,7 +1,5 @@
 package model;
 
-import java.util.Comparator;
-
 public class Pessoa implements Comparable<Pessoa>{
 
     private String nome;

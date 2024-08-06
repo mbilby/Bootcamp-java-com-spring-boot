@@ -9,6 +9,8 @@ public class App {
         ordenacaoPessoa.adicionarPessoas("Nome 3", 25, 1.78);
         ordenacaoPessoa.adicionarPessoas("Nome 4", 17, 1.56);
 
+        System.out.println(ordenacaoPessoa.getListaPessoas());
+
         System.out.println("Ordenação por idade: ");
         System.out.println(ordenacaoPessoa.ordenarPessoaPorIdade());
 

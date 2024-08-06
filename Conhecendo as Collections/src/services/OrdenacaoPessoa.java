@@ -12,7 +12,6 @@ public class OrdenacaoPessoa {
 
     public OrdenacaoPessoa() {
         this.listaDePessoas = new ArrayList<>();
-
     }
 
     public void adicionarPessoas(String nome, int idade, double altura) {
@@ -33,5 +32,11 @@ public class OrdenacaoPessoa {
             Collections.sort(pessoasOrdenadaPorAltura, new OrdenacaoPorAltura());
         }
         return pessoasOrdenadaPorAltura;
+    }
+
+    public List<Pessoa> getListaPessoas() {
+        List<Pessoa> retornaListaDePessoas = new ArrayList<>(listaDePessoas);
+        return retornaListaDePessoas;
+        
     }
 }
