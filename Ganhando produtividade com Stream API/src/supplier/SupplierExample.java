@@ -1,8 +1,8 @@
 package supplier;
 
-import java.util.function.Supplier;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
+//import java.util.function.Supplier;
+//import java.util.stream.Collector;
+//import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.List;
 
